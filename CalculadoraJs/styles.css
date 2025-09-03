@@ -1,0 +1,33 @@
+*
+{
+    background-color:rgb(169, 169, 169);
+}
+
+
+.calculadora {
+    width: 400px;
+    margin-left: 450px;
+    margin-top: 150px;
+}
+
+
+.display{
+    font-size: 2em;
+    width: 99%;
+    border: none;
+    text-align: left;
+    background-color: #f3f3f3;
+}
+
+.btn{
+    width: 100%;
+    height: 50px;
+    font-size: 1em;
+    border: none;
+    background-color: #f3f3f3;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background-color: #9e9e9e;
+}
