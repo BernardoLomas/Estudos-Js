@@ -2,45 +2,24 @@ function Calculadora() {
     this.display = document.querySelector('.display');
 
     //Inicia a calculadora
-    this.Inicia = function () {
-        this.cliqueBotoes();
-    };
-
+    this.Inicia = () => this.cliqueBotoes();
     //Limpa o display
-    this.clearDisplay = function() {
-        this.display.value = '';
-    };
-
+    this.clearDisplay = () => this.display.value = '';
     //Apaga um caractere
-    this.apagaUm = function() {
-        this.display.value = this.display.value.slice(0, -1);
-    };
+    this.apagaUm = () => this.display.value = this.display.value.slice(0, -1);
 
     //Botão que pega o valor do display
-    this.BtnParaDisplay = function (valor) {
-        this.display.value += valor;
-    };
+    this.BtnParaDisplay = (valor) => this.display.value += valor;
 
     //Pega os cliques dos botões
     this.cliqueBotoes = function () {
         document.addEventListener('click', (e) => { // É aqui onde o Js vai pegar onde o clique foi
             const el = e.target;
 
-            if (el.classList.contains('btn-num')) {
-                this.BtnParaDisplay(el.innerText);
-            }
-
-            if (el.classList.contains('btn-clear')) {
-                this.clearDisplay();
-            }
-
-            if (el.classList.contains('btn-del')) {
-                this.apagaUm();
-            }
-
-            if (el.classList.contains('btn-eq')) {
-                this.RealizaConta();
-            }
+            if (el.classList.contains('btn-num')) this.BtnParaDisplay(el.innerText);
+            if (el.classList.contains('btn-clear')) this.clearDisplay();
+            if (el.classList.contains('btn-del')) this.apagaUm();
+            if (el.classList.contains('btn-eq')) this.RealizaConta();
         });
     };
 
