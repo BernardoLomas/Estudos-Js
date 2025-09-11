@@ -5,7 +5,7 @@
 ```markdown
 # Estudos em JavaScript
 
-Este repositório contém meus exercícios e experimentos em **JavaScript**, com foco em lógica, fundamentos da linguagem e conceitos mais avançados.
+Este repositório contém meus exercícios e experimentos em JavaScript, com foco em lógica, fundamentos da linguagem e conceitos mais avançados.
 
 ## Conteúdo já estudado
 - Manipulação de arrays (`map`, `filter`, `reduce`, `splice`, etc.)
@@ -20,4 +20,4 @@ Consolidar o aprendizado em JavaScript e evoluir do básico ao avançado, inclui
 ## Como executar
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/estudos-js.git
+   https://github.com/BernardoLomas/Estudos-Js.git
