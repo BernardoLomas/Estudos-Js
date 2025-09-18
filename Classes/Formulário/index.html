@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulário de cadastro</title>
+</head>
+<body>
+    <section class="container">
+        <h1>Formulário de cadastro</h1>
+        <ul>
+            <li>Nenhum campo pode estar vazio</li>
+            <li>Usuário só poderá conter letras e/ou números</li>
+            <li>Usuário deverá ter entre 3 a 12 caracteres</li>
+            <li>Senha precisa ter entre 6 e 12 caracteres</li>
+        </ul>
+
+        <form action="/" method="post" class='formulario'>
+            <label>Nome</label>
+            <input type="text" class="nome">
+            <label>Sobrenome</label>
+            <input type="text" class="sobrenome">
+            <label>CPF</label>
+            <input type="text" class="cpf">
+            <label>Usuário</label>
+            <input type="text" class="usuario">
+            <label>Senha</label>
+            <input type="text" class="senha">
+            <label>Repetir senha</label>
+            <input type="text" class="repetir">
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</body>
+</html>

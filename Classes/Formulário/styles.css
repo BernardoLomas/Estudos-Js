@@ -1,0 +1,52 @@
+body {
+    background-color: rgba(127, 225, 255, 0.278);
+}
+
+.container {
+    width: 700px;
+    height: 700px;
+    background-color: white;
+    margin-left: 550px;
+    margin-top: 75px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.container h1 {
+    text-align: center;
+    padding-top: 40px;
+    font-family: Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.container ul {
+    text-align: left;
+    font-family: Verdana, sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    gap: 10px;
+
+}
+
+form label{
+    justify-content: left;
+    align-items: left;
+}
+
+form input {
+    width: 600px;
+    height: 20px;
+}
+
+form button{
+    width: 610px;
+    height: 30px;
+    margin-top: 20px;
+    background-color: rgb(157, 211, 255);
+}
