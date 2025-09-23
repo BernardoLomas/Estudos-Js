@@ -22,7 +22,7 @@ const Promessa1 = [
 
 Promise.all(Promessa1)
     .then(function(valor) {
-        console.log("Todos os arquivos foram baixados.");
+        console.log("Todos os arquivos foram baixados");
     })
     .catch(function(erro) {
         console.log(erro);
