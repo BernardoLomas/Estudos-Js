@@ -1,5 +1,4 @@
 //Limpa os caracteres do cpf, tirando pontos, espaços, traços ou qualquer coisa além de números.
-
 function ValidaCPF(cpfEnviado) {
     Object.defineProperty(this, 'cpfLimpo', {
         get: function () {
