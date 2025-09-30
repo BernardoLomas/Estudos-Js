@@ -1,31 +1,17 @@
-// Uma API deve ser capaz de fazer o CRUD = C: Create (criar), R: Read(ler), U: Update (atualizar), D: Delete(apagar)
-// http://meusite.com/sobre <- GET -> Entregue a página /sobre
 const express = require('express') //Importação do módulo do express
 const app = express() //Criação da variável app para uso do express
-app.use(express.json())
-const produtosRoutes = require('./Routes/produtosRoutes.Js');
+app.use(express.json()); //Possibilita interpretação de Json pelo express
+const path = require('path');
 
-app.get('/', (req, res) => { //Manda a requisição da aba '/' e retorna a resposta 'Hello World!' a partir do método GET
-    res.send('Hello World!');
-});
+const produtosRoutes = require('./src/Routes/produtosRoutes.Js'); //Exportação do Routes
+app.use('/produtos', produtosRoutes); //Uso dos métodos de produtos pelo express
 
-app.get('/produto/:id', (req, res) => {
-    const id = req.params.id;
-    res.send(`Produto com ID: ${id}`);
-});
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
-app.get('/busca', (req, res) => {
-    const termo = req.query.termo;
-    const pagina = req.query.pagina;
-    res.send(`Buscando categoria: ${termo} com preço até: ${pagina}`);
+app.get('/home', (req, res) => {
+    res.render('index');
 })
-
-app.post('/cadastro', (req, res) => {
-    const {usuario, senha } = req.body;
-    res.send(`Usuário: ${usuario} | Senha: ${senha}`);
-});
-
-app.use('/produtos', produtosRoutes);
 
 app.listen(3000, () => {
     console.log('Acessar http://localhost:3000');
