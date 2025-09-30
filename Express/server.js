@@ -8,21 +8,21 @@ app.get('/', (req, res) => { //Manda a requisição da aba '/' e retorna a respo
     res.send('Hello World!');
 });
 
-app.get('/produto/:id?123', (req, res) => {
+app.get('/produto/:id', (req, res) => {
     const id = req.params.id;
     res.send(`Produto com ID: ${id}`);
 });
 
-app.get('/busca/:categoria=tenis&preco=100', (req, res) => {
-    const categoria = req.query.categoria;
-    const preco = req.query.preco;
-    res.send(`Buscando categoria: ${cateogoria} com preço até: ${preco}`);
-})
+app.get('/busca', (req, res) => {
+    const termo = req.query.termo;
+    const pagina = req.query.pagina;
+    res.send(`Buscando categoria: ${termo} com preço até: ${pagina}`);
+});
 
 app.post('/cadastro', (req, res) => {
     const {usuario, senha } = req.body;
     res.send(`Usuário: ${usuario} | Senha: ${senha}`);
-})
+});
 
 app.listen(3000, () => {
     console.log('Acessar http://localhost:3000');
